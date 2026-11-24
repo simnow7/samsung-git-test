@@ -35,5 +35,6 @@
         "productId": "prd_SPM",
         "ruleFormat": "latest",
         "note": "Adding EPD"
-    }
+    },
+    "suggestedRuleFormat": "v2018-09-12"
 }
