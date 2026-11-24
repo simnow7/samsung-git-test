@@ -5,15 +5,15 @@
     "groupId": 60056,
     "isSecure": true,
     "latestVersionInfo": {
-        "propertyVersion": 355,
+        "propertyVersion": 356,
         "updatedByUser": "hsim",
-        "updatedDate": "2026-11-24T22:21:52Z",
+        "updatedDate": "2026-11-24T22:25:58Z",
         "productionStatus": "INACTIVE",
-        "stagingStatus": "ACTIVE",
-        "etag": "9b4fc5b00e455bb703be319d01b7dd41c32781d1",
+        "stagingStatus": "INACTIVE",
+        "etag": "96b893b03ef8f626e8d009dab0f30a396ef5328c",
         "productId": "prd_SPM",
         "ruleFormat": "latest",
-        "note": "git test"
+        "note": "git test2"
     },
     "activeIn_STAGING_Info": {
         "propertyVersion": 355,
