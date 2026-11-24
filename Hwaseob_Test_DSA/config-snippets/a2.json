@@ -1,0 +1,21 @@
+{
+    "name": "a2",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "adaptiveAcceleration",
+            "options": {
+                "source": "MPULSE",
+                "enablePush": false,
+                "enablePreconnect": true,
+                "enableRo": false,
+                "titleHttp2ServerPush": "",
+                "titlePreconnect": "",
+                "titleRo": ""
+            }
+        }
+    ],
+    "criteria": [],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

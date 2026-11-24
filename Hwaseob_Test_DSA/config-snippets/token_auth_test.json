@@ -1,0 +1,39 @@
+{
+    "name": "token auth test",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "setVariable",
+            "options": {
+                "valueSource": "EXTRACT",
+                "transform": "NONE",
+                "variableName": "PMUSER_UA",
+                "extractLocation": "CLIENT_REQUEST_HEADER",
+                "headerName": "User-Agent"
+            }
+        },
+        {
+            "name": "advanced",
+            "options": {
+                "description": "",
+                "xml": "<match:request.method value=\"AKAMAI_TRANSLATE AKAMAI_PURGE\" result=\"false\">\n                    <assign:extract-value>\n                        <variable-name>HSIM_1</variable-name>\n                        <location>Cookie</location>\n                        <location-id>__token__</location-id>\n                        <location-id-prefix-match>off</location-id-prefix-match>\n                        <separator>=</separator>\n                        <add-prefix>none</add-prefix>\n                        <add-suffix>none</add-suffix>\n                    </assign:extract-value>\n                    <!-- Verify token from query string -->\n                    <auth:browser.token>\n                        <hmac-algo>SHA256</hmac-algo>\n                        <escape-hmac-inputs>on</escape-hmac-inputs>\n                        <verify>\n                            <key>57153d9ab7a20df715487bcfb9ec63cc918f2da76c0286b51d71d26960031024</key>\n                            <url>%(AK_URL)</url>\n                            <token>%(HSIM_1)</token>\n                            <salt>%(PMUSER_UA)</salt>\n                            <!--disable automatic error responses -->\n                            <failure-response>on</failure-response>\n                            <!--extract the result of this verification into TOKENXXX_* variables -->\n                            <variable-prefix>PM_TOKEN1</variable-prefix>\n                        </verify>\n                    </auth:browser.token>\n</match:request.method>"
+            },
+            "uuid": "687ae4d9-4e6a-4715-8f34-8310245c98b3"
+        }
+    ],
+    "uuid": "d0567b50-bcec-4327-a6dc-e23074938b5a",
+    "criteria": [
+        {
+            "name": "filename",
+            "options": {
+                "matchOperator": "IS_ONE_OF",
+                "matchCaseSensitive": true,
+                "values": [
+                    "a.jpg"
+                ]
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

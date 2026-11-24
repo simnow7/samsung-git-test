@@ -1,0 +1,11 @@
+{
+    "productId": "SPM",
+    "contractId": "C-1BBSI2U",
+    "groupId": 60056,
+    "version": "0.7.8-RELEASE",
+    "isSecure": true,
+    "edgeGridConfig": {
+        "section": "switch4"
+    },
+    "name": "Hwaseob_Test_DSA"
+}

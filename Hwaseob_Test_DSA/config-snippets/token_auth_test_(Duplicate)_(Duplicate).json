@@ -1,0 +1,30 @@
+{
+    "name": "token auth test (Duplicate) (Duplicate)",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "verifyTokenAuthorization",
+            "options": {
+                "useAdvanced": false,
+                "location": "COOKIE",
+                "locationId": "__token__",
+                "failureResponse": true,
+                "key": "57153d9ab7a20df715487bcfb9ec63cc918f2da76c0286b51d71d26960031024"
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "filename",
+            "options": {
+                "matchOperator": "IS_ONE_OF",
+                "matchCaseSensitive": true,
+                "values": [
+                    "c.jpg"
+                ]
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

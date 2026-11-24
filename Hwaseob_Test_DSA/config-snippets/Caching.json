@@ -1,0 +1,30 @@
+{
+    "name": "Caching",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "caching",
+            "options": {
+                "behavior": "MAX_AGE",
+                "mustRevalidate": false,
+                "ttl": "2h"
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "fileExtension",
+            "options": {
+                "matchOperator": "IS_ONE_OF",
+                "values": [
+                    "css",
+                    "js",
+                    "jpg"
+                ],
+                "matchCaseSensitive": false
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

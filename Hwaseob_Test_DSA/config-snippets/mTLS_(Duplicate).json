@@ -1,0 +1,78 @@
+{
+    "name": "mTLS (Duplicate)",
+    "children": [
+        {
+            "name": "Deny for wrong client cert",
+            "children": [],
+            "behaviors": [
+                {
+                    "name": "denyAccess",
+                    "options": {
+                        "reason": "mtls-deny",
+                        "enabled": true
+                    }
+                }
+            ],
+            "criteria": [
+                {
+                    "name": "clientCertificate",
+                    "options": {
+                        "enforceMtls": "FAIL"
+                    }
+                },
+                {
+                    "name": "clientCertificate",
+                    "options": {
+                        "enforceMtls": "IGNORE",
+                        "certificateState": "MISSING"
+                    }
+                },
+                {
+                    "name": "clientCertificate",
+                    "options": {
+                        "enforceMtls": "IGNORE",
+                        "certificateState": "PRESENT_INVALID"
+                    }
+                }
+            ],
+            "criteriaMustSatisfy": "any",
+            "comments": ""
+        }
+    ],
+    "behaviors": [
+        {
+            "name": "enforceMtlsSettings",
+            "options": {
+                "enableAuthSet": true,
+                "edgeChecksTitle": "",
+                "certificateAuthoritySet": [
+                    "101162"
+                ],
+                "enableOcspStatus": false,
+                "enableDenyRequest": true,
+                "originChecksTitle": "",
+                "enableCompleteClientCertificate": true,
+                "clientCertificateAttributes": [
+                    "SUBJECT",
+                    "COMMON_NAME",
+                    "SHA256_FINGERPRINT",
+                    "ISSUER"
+                ]
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "path",
+            "options": {
+                "matchOperator": "MATCHES_ONE_OF",
+                "matchCaseSensitive": false,
+                "values": [
+                    "/mtls2/*"
+                ]
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

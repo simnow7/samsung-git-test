@@ -1,0 +1,4 @@
+.edgerc
+*.edgerc
+node_modules/
+.DS_Store

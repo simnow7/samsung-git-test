@@ -1,0 +1,37 @@
+[
+    {
+        "cnameType": "EDGE_HOSTNAME",
+        "edgeHostnameId": 2789700,
+        "cnameFrom": "*-www.hwaseob.com",
+        "cnameTo": "www.hwaseob.com.edgekey.net",
+        "certProvisioningType": "CPS_MANAGED"
+    },
+    {
+        "cnameType": "EDGE_HOSTNAME",
+        "edgeHostnameId": 2471693,
+        "cnameFrom": "www-failover.hwaseob.com",
+        "cnameTo": "ariaroth.mooo.com.edgekey.net",
+        "certProvisioningType": "CPS_MANAGED"
+    },
+    {
+        "cnameType": "EDGE_HOSTNAME",
+        "edgeHostnameId": 2789700,
+        "cnameFrom": "www.hwaseob.com",
+        "cnameTo": "www.hwaseob.com.edgekey.net",
+        "certProvisioningType": "CPS_MANAGED"
+    },
+    {
+        "cnameType": "EDGE_HOSTNAME",
+        "edgeHostnameId": 2789700,
+        "cnameFrom": "www.hwaseob.com.edgekey-staging.net",
+        "cnameTo": "www.hwaseob.com.edgekey.net",
+        "certProvisioningType": "CPS_MANAGED"
+    },
+    {
+        "cnameType": "EDGE_HOSTNAME",
+        "edgeHostnameId": 2789700,
+        "cnameFrom": "www.hwaseob.com.edgekey.net",
+        "cnameTo": "www.hwaseob.com.edgekey.net",
+        "certProvisioningType": "CPS_MANAGED"
+    }
+]

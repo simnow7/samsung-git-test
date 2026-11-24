@@ -1,0 +1,29 @@
+{
+    "name": "a2 cookie off",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "advanced",
+            "options": {
+                "description": "mpulse cookie off",
+                "xml": "<edgeservices:cookie.set-fixed name=\"RUA_COMMON_COOKIE\">\n<status>off</status>\n</edgeservices:cookie.set-fixed>"
+            },
+            "uuid": "8e4bd3e9-4aff-488f-8f56-67c6682c2c55"
+        }
+    ],
+    "uuid": "ec96728e-07cf-4c84-9c98-c204ce8f12fb",
+    "criteria": [
+        {
+            "name": "path",
+            "options": {
+                "matchOperator": "MATCHES_ONE_OF",
+                "matchCaseSensitive": false,
+                "values": [
+                    "/a2-cookie-off/"
+                ]
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

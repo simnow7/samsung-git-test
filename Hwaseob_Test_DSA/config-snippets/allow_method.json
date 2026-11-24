@@ -1,0 +1,28 @@
+{
+    "name": "allow method",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "allowPost",
+            "options": {
+                "enabled": true,
+                "allowWithoutContentLength": false
+            }
+        },
+        {
+            "name": "allowPut",
+            "options": {
+                "enabled": true
+            }
+        },
+        {
+            "name": "allHttpInCacheHierarchy",
+            "options": {
+                "enabled": true
+            }
+        }
+    ],
+    "criteria": [],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

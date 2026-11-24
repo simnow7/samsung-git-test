@@ -1,0 +1,18 @@
+{
+    "name": "SEC_FP_TLS_V2",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "advanced",
+            "options": {
+                "description": "SEC_FP_TLS_V2",
+                "xml": "<assign:variable>\n        <name>PMUSER_MY_FP</name>\n        <value>%(SEC_FP_TLS_V2)</value>\n    </assign:variable>"
+            },
+            "uuid": "155840bb-b6ae-4a89-af44-3d29ff955b72"
+        }
+    ],
+    "uuid": "6a8e773f-777e-46f6-8399-9a9164a139af",
+    "criteria": [],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

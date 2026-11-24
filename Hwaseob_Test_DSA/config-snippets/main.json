@@ -1,0 +1,379 @@
+{
+    "rules": {
+        "name": "default",
+        "children": [
+            "#include:compression.json",
+            "#include:Caching.json",
+            "#include:IVM_jpg_test_im.json",
+            "#include:token_auth_test.json",
+            "#include:token_auth_test_(Duplicate).json",
+            "#include:token_auth_test_(Duplicate)_(Duplicate).json",
+            "#include:dynamic.json",
+            "#include:ds2.json",
+            "#include:Failaction_test.json",
+            "#include:Failover_DP.json",
+            "#include:SR.json",
+            "#include:allow_method.json",
+            "#include:nginx_origin.json",
+            "#include:uk_origin_+_early_hint_.json",
+            "#include:http_token.json",
+            "#include:SEC_FP_TLS_V2.json",
+            "#include:redirect.json",
+            "#include:ACL_all_deny.json",
+            "#include:mTLS.json",
+            "#include:mTLS_(Duplicate).json",
+            "#include:a2.json",
+            "#include:a2_cookie_off.json",
+            "#include:AI_Bot.json"
+        ],
+        "behaviors": [
+            {
+                "name": "origin",
+                "options": {
+                    "originType": "NET_STORAGE",
+                    "netStorage": {
+                        "cpCode": 438972,
+                        "downloadDomainName": "hwaseob_object.download.akamai.com",
+                        "g2oToken": null
+                    }
+                }
+            },
+            {
+                "name": "cpCode",
+                "options": {
+                    "value": {
+                        "id": 1742028,
+                        "description": "edgeio-mx-cloud",
+                        "products": [
+                            "SPM"
+                        ],
+                        "createdDate": 1733987270000,
+                        "cpCodeLimits": {
+                            "limit": 3500,
+                            "currentCapacity": 537,
+                            "limitType": "account"
+                        },
+                        "name": "edgeio-mx-cloud"
+                    }
+                }
+            },
+            {
+                "name": "caching",
+                "options": {
+                    "behavior": "MAX_AGE",
+                    "ttl": "5m",
+                    "mustRevalidate": false
+                }
+            },
+            {
+                "name": "prefetch",
+                "options": {
+                    "enabled": true
+                }
+            },
+            {
+                "name": "allowPost",
+                "options": {
+                    "allowWithoutContentLength": false,
+                    "enabled": true
+                }
+            },
+            {
+                "name": "autoDomainValidation",
+                "options": {
+                    "autodv": ""
+                }
+            },
+            {
+                "name": "report",
+                "options": {
+                    "logHost": true,
+                    "logReferer": true,
+                    "logUserAgent": true,
+                    "logAcceptLanguage": true,
+                    "logCookies": "ALL",
+                    "logCustomLogField": true,
+                    "customLogField": "ctt:{{builtin.AK_CLIENT_RTT}}"
+                }
+            },
+            {
+                "name": "corsSupport",
+                "options": {
+                    "enabled": true,
+                    "allowOrigins": "ANY",
+                    "allowCredentials": false,
+                    "allowHeaders": "ANY",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ],
+                    "preflightMaxAge": "600s",
+                    "exposeHeaders": []
+                },
+                "uuid": "3965b7fc-fb23-4742-924c-67fa77b1ed79",
+                "locked": true
+            },
+            {
+                "name": "siteShield",
+                "options": {
+                    "ssmap": {
+                        "name": "skangssmap (s838.akamaiedge.net)",
+                        "value": "s838.akamaiedge.net",
+                        "srmap": "Akamai-Korea-e848.akasrg.akamai.com",
+                        "src": "PREVIOUS_MAP",
+                        "hasMixedHosts": false
+                    }
+                }
+            },
+            {
+                "name": "http2",
+                "options": {
+                    "enabled": ""
+                }
+            },
+            {
+                "name": "allowTransferEncoding",
+                "options": {
+                    "enabled": true
+                }
+            },
+            {
+                "name": "largeFileOptimization",
+                "options": {
+                    "enabled": false
+                }
+            },
+            {
+                "name": "pqcClientToEdge",
+                "options": {
+                    "enabled": true
+                }
+            },
+            {
+                "name": "mPulse",
+                "options": {
+                    "enabled": true,
+                    "requirePci": false,
+                    "configOverride": "",
+                    "titleOptional": "",
+                    "apiKey": "",
+                    "bufferSize": ""
+                }
+            },
+            {
+                "name": "breadcrumbs",
+                "options": {
+                    "enabled": true,
+                    "optMode": true,
+                    "loggingEnabled": true
+                }
+            },
+            {
+                "name": "enhancedProxyDetection",
+                "options": {
+                    "enabled": true,
+                    "forwardHeaderEnrichment": true,
+                    "enableConfigurationMode": "BEST_PRACTICE",
+                    "bestPracticeAction": "ALLOW"
+                }
+            }
+        ],
+        "uuid": "default",
+        "options": {
+            "is_secure": true
+        },
+        "variables": [
+            {
+                "description": "",
+                "hidden": true,
+                "name": "PMUSER_AIBOT",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_MY_FP",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": true,
+                "name": "PMUSER_QS",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_UA",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_CLIENT_IP",
+                "sensitive": false,
+                "value": "false"
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_CLIENT_COUNTRY",
+                "sensitive": false,
+                "value": "false"
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_CLIENT_CITY",
+                "sensitive": false,
+                "value": "false"
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_CLIENT_STATE",
+                "sensitive": false,
+                "value": "false"
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_RTT",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_ETAG",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_LMT",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_RTT_MAG",
+                "sensitive": false,
+                "value": "LOW"
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_PATH",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_BYPASS_CACHE",
+                "sensitive": false,
+                "value": "false"
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_WEBCART_REDIR_PATH",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_HEADER",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_XFF",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_TRUECLIENTIP",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_XFF2",
+                "sensitive": false,
+                "value": "false"
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_TRUECLIENTIP2",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_SERVER_CHILD",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_PARENT_IP_1",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_MTLS_STATUS",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_MTLS_CERT",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_MTLS_CERT_SERIAL",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_MTLS_CERT_SIG",
+                "sensitive": false,
+                "value": ""
+            },
+            {
+                "description": "",
+                "hidden": false,
+                "name": "PMUSER_FILENAME",
+                "sensitive": false,
+                "value": ""
+            }
+        ],
+        "advancedOverride": " <forward:cache-parent>\n    <status>on</status>\n    <policy>performance</policy>\n    <selection-method>sureroute</selection-method>\n    <map>Akamai-Korea-e20009.akasrg.akamai.com</map>\n    <sureroute>\n      <active-test.object-type>test</active-test.object-type>\n      <active-test.test-object.url>http://%(AK_HOSTHEADER)/test/sureroute-test-object1MB.test</active-test.test-object.url>\n      <active-test.test-object.sync.apply-metadata>on</active-test.test-object.sync.apply-metadata>\n      <active-test.stat-ttl>86400s</active-test.stat-ttl>\n      <max-parents>2</max-parents>\n      <billing-code>R</billing-code>\n      <active-test.upload-race>\n        <request-method>POST</request-method>\n        <size>64000</size>\n        <status>on</status>\n      </active-test.upload-race>\n      <scoring>\n        <request-end-time-weight>1</request-end-time-weight>\n        <turn-around-time-weight>3</turn-around-time-weight>\n        <transfer-time-weight>0</transfer-time-weight>\n      </scoring>\n    </sureroute>\n  </forward:cache-parent>\n\n<match:request.method value=\"POST PUT\">\n<match:variable name=\"AKA_PM_CACHEABLE_OBJECT\" value=\"true\" result=\"false\">\n    <match:variable name=\"AKA_PM_SR_ENABLED\" value=\"true\" result=\"true\">\n            <forward:cache-parent>\n                <sureroute>\n                    <active-test.stat-ttl>10m</active-test.stat-ttl>\n                    <active-test.request-object.max-req>1</active-test.request-object.max-req>\n                    <active-test.request-object.max-time>1m</active-test.request-object.max-time>\n                    <active-test.request-object.min-period>15s</active-test.request-object.min-period>\n                </sureroute>\n            </forward:cache-parent>\n    </match:variable>\n   </match:variable>\n</match:request.method>",
+        "comments": ""
+    }
+}

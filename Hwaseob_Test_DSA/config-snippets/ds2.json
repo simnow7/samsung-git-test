@@ -1,0 +1,15 @@
+{
+    "name": "ds2",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "localhostLoopbackProtection",
+            "options": {
+                "loopbackCrossAccountPolicy": true
+            }
+        }
+    ],
+    "criteria": [],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

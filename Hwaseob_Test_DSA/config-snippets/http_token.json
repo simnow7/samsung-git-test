@@ -1,0 +1,29 @@
+{
+    "name": "http token",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "constructResponse",
+            "options": {
+                "enabled": true,
+                "responseCode": 200,
+                "forceEviction": true,
+                "body": "q5Il_zQXAGm-qU3S1gTMQD7wOjpPbIyOcjV44RO23ko.nsol21_SpylkqkH0cRic_3tqmslbXk1e4FBXDfoL8hk"
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "path",
+            "options": {
+                "matchOperator": "MATCHES_ONE_OF",
+                "matchCaseSensitive": false,
+                "values": [
+                    "/.well-known/acme-challenge/q5Il_zQXAGm-qU3S1gTMQD7wOjpPbIyOcjV44RO23ko"
+                ]
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

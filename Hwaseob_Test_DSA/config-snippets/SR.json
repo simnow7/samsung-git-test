@@ -1,0 +1,58 @@
+{
+    "name": "SR",
+    "children": [
+        {
+            "name": "FFU map",
+            "children": [],
+            "behaviors": [
+                {
+                    "name": "advanced",
+                    "options": {
+                        "description": "",
+                        "xml": " <forward:cache-parent>\n    <status>on</status>\n    <policy>performance</policy>\n    <selection-method>sureroute</selection-method>\n    <map>Akamai-Korea-e20009.akasrg.akamai.com</map>\n    <sureroute>\n      <active-test.object-type>test</active-test.object-type>\n      <active-test.test-object.url>http://%(AK_HOSTHEADER)/test/sureroute-test-object1MB.test</active-test.test-object.url>\n      <active-test.test-object.sync.apply-metadata>on</active-test.test-object.sync.apply-metadata>\n      <active-test.stat-ttl>86400s</active-test.stat-ttl>\n      <max-parents>2</max-parents>\n      <billing-code>R</billing-code>\n      <active-test.upload-race>\n        <request-method>POST</request-method>\n        <size>64000</size>\n        <status>on</status>\n      </active-test.upload-race>\n      <scoring>\n        <request-end-time-weight>1</request-end-time-weight>\n        <turn-around-time-weight>3</turn-around-time-weight>\n        <transfer-time-weight>0</transfer-time-weight>\n      </scoring>\n    </sureroute>\n  </forward:cache-parent>"
+                    },
+                    "uuid": "75d88f74-f65c-4554-a29d-0e668fd78987"
+                }
+            ],
+            "uuid": "8054953c-53ed-471d-b2e8-39d66d467c85",
+            "criteria": [
+                {
+                    "name": "requestMethod",
+                    "options": {
+                        "matchOperator": "IS",
+                        "value": "POST"
+                    }
+                },
+                {
+                    "name": "requestMethod",
+                    "options": {
+                        "matchOperator": "IS",
+                        "value": "PUT"
+                    }
+                }
+            ],
+            "criteriaMustSatisfy": "any",
+            "comments": ""
+        }
+    ],
+    "behaviors": [
+        {
+            "name": "sureRoute",
+            "options": {
+                "enabled": true,
+                "type": "CUSTOM_MAP",
+                "toHostStatus": "INCOMING_HH",
+                "raceStatTtl": "30m",
+                "forceSslForward": false,
+                "enableCustomKey": false,
+                "testObjectUrl": "/index.html",
+                "srDownloadLinkTitle": "",
+                "customMap": "Akamai-Korea-e848.akasrg.akamai.com"
+            }
+        }
+    ],
+    "criteria": [],
+    "criteriaMustSatisfy": "all",
+    "uuid": "e8578fb1-6b91-47c2-a5e9-2effa4765640",
+    "comments": ""
+}

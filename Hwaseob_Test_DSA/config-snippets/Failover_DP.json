@@ -1,0 +1,28 @@
+{
+    "name": "Failover DP",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "constructResponse",
+            "options": {
+                "enabled": true,
+                "responseCode": 501,
+                "forceEviction": false,
+                "body": "<html><hello>hello</hello></html>"
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "hostname",
+            "options": {
+                "matchOperator": "IS_ONE_OF",
+                "values": [
+                    "www-failover.hwaseob.com"
+                ]
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

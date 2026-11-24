@@ -1,0 +1,39 @@
+{
+    "name": "Hwaseob_Test_DSA",
+    "propertyId": 344841,
+    "propertyName": "Hwaseob_Test_DSA",
+    "groupId": 60056,
+    "isSecure": true,
+    "latestVersionInfo": {
+        "propertyVersion": 354,
+        "updatedByUser": "hsim",
+        "updatedDate": "2026-11-17T06:29:19Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "INACTIVE",
+        "etag": "0239597376ad6814a4a509eabc912a5baccce6cb",
+        "productId": "prd_SPM",
+        "ruleFormat": "latest"
+    },
+    "activeIn_STAGING_Info": {
+        "propertyVersion": 350,
+        "updatedByUser": "hsim",
+        "updatedDate": "2026-08-13T12:08:30Z",
+        "productionStatus": "ACTIVE",
+        "stagingStatus": "ACTIVE",
+        "etag": "ff969e2cd9febdc034d98d7e22e7ff2c03d6e0e8",
+        "productId": "prd_SPM",
+        "ruleFormat": "latest",
+        "note": "Adding EPD"
+    },
+    "activeIn_PRODUCTION_Info": {
+        "propertyVersion": 350,
+        "updatedByUser": "hsim",
+        "updatedDate": "2026-08-13T12:08:30Z",
+        "productionStatus": "ACTIVE",
+        "stagingStatus": "ACTIVE",
+        "etag": "ff969e2cd9febdc034d98d7e22e7ff2c03d6e0e8",
+        "productId": "prd_SPM",
+        "ruleFormat": "latest",
+        "note": "Adding EPD"
+    }
+}

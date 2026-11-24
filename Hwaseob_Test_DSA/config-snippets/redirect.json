@@ -1,0 +1,32 @@
+{
+    "name": "redirect",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "redirect",
+            "options": {
+                "mobileDefaultChoice": "DEFAULT",
+                "destinationProtocol": "SAME_AS_REQUEST",
+                "destinationHostname": "OTHER",
+                "destinationPath": "SAME_AS_REQUEST",
+                "queryString": "APPEND",
+                "responseCode": 302,
+                "destinationHostnameOther": "dcv.akamai.com"
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "path",
+            "options": {
+                "matchOperator": "MATCHES_ONE_OF",
+                "matchCaseSensitive": false,
+                "values": [
+                    "/.well-known/acme-challenge/JbV9x5cYnKgpm7WrBcmiDzS7TnoCSBFRb2gFvPyVork"
+                ]
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

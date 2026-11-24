@@ -1,0 +1,40 @@
+{
+    "name": "Failaction test",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "failAction",
+            "options": {
+                "enabled": true,
+                "actionType": "RECREATED_CO",
+                "contentHostname": "www-failover.hwaseob.com",
+                "contentCustomPath": true,
+                "contentPath": "/failaction",
+                "preserveQueryString": true
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "path",
+            "options": {
+                "matchOperator": "MATCHES_ONE_OF",
+                "matchCaseSensitive": false,
+                "values": [
+                    "/fail"
+                ]
+            }
+        },
+        {
+            "name": "matchResponseCode",
+            "options": {
+                "matchOperator": "IS_ONE_OF",
+                "values": [
+                    "404"
+                ]
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

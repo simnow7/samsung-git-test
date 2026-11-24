@@ -1,0 +1,40 @@
+{
+    "name": "mTLS",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "enforceMtlsSettings",
+            "options": {
+                "enableAuthSet": true,
+                "enableOcspStatus": false,
+                "enableDenyRequest": true,
+                "enableCompleteClientCertificate": true,
+                "edgeChecksTitle": "",
+                "certificateAuthoritySet": [
+                    "101162"
+                ],
+                "originChecksTitle": "",
+                "clientCertificateAttributes": [
+                    "SUBJECT",
+                    "COMMON_NAME",
+                    "SHA256_FINGERPRINT",
+                    "ISSUER"
+                ]
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "path",
+            "options": {
+                "matchOperator": "MATCHES_ONE_OF",
+                "matchCaseSensitive": false,
+                "values": [
+                    "/mtls/*"
+                ]
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

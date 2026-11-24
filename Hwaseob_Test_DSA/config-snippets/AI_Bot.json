@@ -1,0 +1,129 @@
+{
+    "name": "AI Bot",
+    "children": [
+        {
+            "name": "Gemi",
+            "children": [],
+            "behaviors": [
+                {
+                    "name": "caching",
+                    "options": {
+                        "behavior": "MAX_AGE",
+                        "mustRevalidate": false,
+                        "ttl": "5m"
+                    }
+                },
+                {
+                    "name": "setVariable",
+                    "options": {
+                        "valueSource": "EXPRESSION",
+                        "transform": "NONE",
+                        "variableName": "PMUSER_AIBOT",
+                        "variableValue": "AI"
+                    }
+                },
+                {
+                    "name": "cacheId",
+                    "options": {
+                        "rule": "INCLUDE_VARIABLE",
+                        "variableName": "PMUSER_AIBOT"
+                    }
+                }
+            ],
+            "criteria": [
+                {
+                    "name": "userAgent",
+                    "options": {
+                        "matchOperator": "IS_ONE_OF",
+                        "matchWildcard": true,
+                        "matchCaseSensitive": false,
+                        "values": [
+                            "*Gemi*"
+                        ]
+                    }
+                }
+            ],
+            "criteriaMustSatisfy": "all",
+            "comments": ""
+        },
+        {
+            "name": "ChatAI",
+            "children": [],
+            "behaviors": [
+                {
+                    "name": "caching",
+                    "options": {
+                        "behavior": "MAX_AGE",
+                        "mustRevalidate": false,
+                        "ttl": "6m"
+                    }
+                },
+                {
+                    "name": "setVariable",
+                    "options": {
+                        "valueSource": "EXPRESSION",
+                        "transform": "NONE",
+                        "variableName": "PMUSER_AIBOT",
+                        "variableValue": "AI"
+                    }
+                },
+                {
+                    "name": "cacheId",
+                    "options": {
+                        "rule": "INCLUDE_VARIABLE",
+                        "variableName": "PMUSER_AIBOT"
+                    }
+                }
+            ],
+            "criteria": [
+                {
+                    "name": "userAgent",
+                    "options": {
+                        "matchOperator": "IS_ONE_OF",
+                        "matchWildcard": true,
+                        "matchCaseSensitive": false,
+                        "values": [
+                            "*ChatAI*"
+                        ]
+                    }
+                }
+            ],
+            "criteriaMustSatisfy": "all",
+            "comments": ""
+        },
+        {
+            "name": "Not AI Bot",
+            "children": [],
+            "behaviors": [
+                {
+                    "name": "caching",
+                    "options": {
+                        "behavior": "MAX_AGE",
+                        "mustRevalidate": false,
+                        "ttl": "4h"
+                    }
+                }
+            ],
+            "criteria": [
+                {
+                    "name": "userAgent",
+                    "options": {
+                        "matchOperator": "IS_NOT_ONE_OF",
+                        "matchWildcard": true,
+                        "matchCaseSensitive": false,
+                        "values": [
+                            "*ChatAI*",
+                            "*Gemi*"
+                        ]
+                    }
+                }
+            ],
+            "criteriaMustSatisfy": "all",
+            "comments": ""
+        }
+    ],
+    "behaviors": [],
+    "criteria": [],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}
