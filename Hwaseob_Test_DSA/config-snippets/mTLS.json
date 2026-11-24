@@ -19,7 +19,10 @@
                     "COMMON_NAME",
                     "SHA256_FINGERPRINT",
                     "ISSUER"
-                ]
+                ],
+                "allowSameAccountEwSubrequests": false,
+                "allowedEdgeWorkerIds": [],
+                "allowLoopbackEwSubrequests": false
             }
         }
     ],

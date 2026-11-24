@@ -5,32 +5,33 @@
     "groupId": 60056,
     "isSecure": true,
     "latestVersionInfo": {
-        "propertyVersion": 354,
+        "propertyVersion": 355,
         "updatedByUser": "hsim",
-        "updatedDate": "2026-11-17T06:29:19Z",
+        "updatedDate": "2026-11-24T22:21:52Z",
         "productionStatus": "INACTIVE",
-        "stagingStatus": "INACTIVE",
-        "etag": "0239597376ad6814a4a509eabc912a5baccce6cb",
-        "productId": "prd_SPM",
-        "ruleFormat": "latest"
-    },
-    "activeIn_STAGING_Info": {
-        "propertyVersion": 350,
-        "updatedByUser": "hsim",
-        "updatedDate": "2026-08-13T12:08:30Z",
-        "productionStatus": "ACTIVE",
         "stagingStatus": "ACTIVE",
-        "etag": "ff969e2cd9febdc034d98d7e22e7ff2c03d6e0e8",
+        "etag": "9b4fc5b00e455bb703be319d01b7dd41c32781d1",
         "productId": "prd_SPM",
         "ruleFormat": "latest",
-        "note": "Adding EPD"
+        "note": "git test"
+    },
+    "activeIn_STAGING_Info": {
+        "propertyVersion": 355,
+        "updatedByUser": "hsim",
+        "updatedDate": "2026-11-24T22:21:52Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "ACTIVE",
+        "etag": "9b4fc5b00e455bb703be319d01b7dd41c32781d1",
+        "productId": "prd_SPM",
+        "ruleFormat": "latest",
+        "note": "git test"
     },
     "activeIn_PRODUCTION_Info": {
         "propertyVersion": 350,
         "updatedByUser": "hsim",
         "updatedDate": "2026-08-13T12:08:30Z",
         "productionStatus": "ACTIVE",
-        "stagingStatus": "ACTIVE",
+        "stagingStatus": "DEACTIVATED",
         "etag": "ff969e2cd9febdc034d98d7e22e7ff2c03d6e0e8",
         "productId": "prd_SPM",
         "ruleFormat": "latest",
