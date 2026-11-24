@@ -2,3 +2,6 @@
 *.edgerc
 node_modules/
 .DS_Store
+*.log
+**/cache/
+**/dist/
